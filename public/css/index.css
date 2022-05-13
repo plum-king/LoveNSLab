@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 25px;
+    color: #ffa200;
+}
+
+div.container, div.audio{
+    text-align: center;
+}
+
+@keyframes fadein{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+div.container{
+    animation-name: fadein;
+    opacity: 0;
+    animation-delay: 7s;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+div.audio>p{
+    font-size: 50px;
+    font-family: 'Black Han Sans', sans-serif;
+
+}
+
+div.audio{
+    margin-bottom: 30px;
+}
+
+div.wrapped{
+    display: inline-block;
+}
+
+div.container>div>div>div, img.light{
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes bounce{
+    from {
+        transform: scale(1);
+        transition: .1s;
+    }
+    to {
+        transform: scale(1.5);
+        transition: .1s;
+    }
+}
+
+
+@keyframes rotate{
+    100% {
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+}
+
+img.light{
+    animation: rotate 10s infinite, bounce 0.3s infinite;
+    
+}
+
+div.first>div, div.second>div, div.third>div{
+    display: inline-block;
+}
+
+div.img{
+    display: inline-block;
+}
+
+div.second>div>img{
+    height: 200px;
+}
+
+div.text{
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+
