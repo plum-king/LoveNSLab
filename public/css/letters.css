@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-weight: bolder;
+}
+
+div.container > div.footer>p{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 50px;
+}
+
+div.container{
+    text-align: center;
+}
+
+div.container>div{
+    display: inline-block;
+}
+
+div#first, #second, #third{
+    position: relative;
+}
+
+div#first>p{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+
+div#second>p{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    font-weight: bold;
+    font-size: 13px;
+
+}
+
+img.postit{
+    width: 450px;
+    height: 400px;
+}
+
+div.container > div{
+    margin-top: 20px;
+}
+
+img.sketchbook{
+    width: 900px;
+    height: 600px;
+}
+
+div.footer{
+    margin-top: 40px;
+}
+
+
