@@ -9,8 +9,74 @@ a{
     color: #ffa200;
 }
 
+div.second>p{
+    animation-name: fadein;
+    opacity: 0;
+    animation-delay: 7s;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+div.container>a {
+    animation-name: fadein;
+    opacity: 0;
+    animation-delay: 20s;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+div.confetti, div.confetti1, div.first, div.third{
+    animation-name: fadein;
+    opacity: 0;
+    animation-delay: 12s;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+div.container>a>p{
+    font-size: 50px;
+}
+
 div.container, div.audio{
     text-align: center;
+}
+
+img.trumpet{
+    width: 200px;
+}
+
+div.third>div>img.trumpet{
+    transform: scaleX(-1);
+}
+
+div.wrapped{
+    position: relative;
+}
+
+div.second{
+    position: absolute;
+    top: 0;
+}
+
+div.second>div.redcarpet{
+    z-index: -1;
+}
+
+@keyframes typing {
+    from {
+        height: 0;
+    }
+}
+
+div.redcarpet>img{
+    width: 600px;
+    height: 550px;
+    opacity: 0;
+    animation: fadein 3s 10s 1 forwards, typing 5s 10s steps(39);
 }
 
 @keyframes fadein{
@@ -23,15 +89,6 @@ div.container, div.audio{
     }
 }
 
-div.container{
-    animation-name: fadein;
-    opacity: 0;
-    animation-delay: 7s;
-    animation-duration: 10s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
 div.audio>p{
     font-size: 50px;
     font-family: 'Black Han Sans', sans-serif;
@@ -42,13 +99,18 @@ div.audio{
     margin-bottom: 30px;
 }
 
-div.wrapped{
+div.wrapped>div{
     display: inline-block;
 }
 
-div.container>div>div>div, img.light{
-    width: 200px;
-    height: 200px;
+@keyframes flip {
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(-1);
+    }
+    
 }
 
 @keyframes bounce{
@@ -62,35 +124,99 @@ div.container>div>div>div, img.light{
     }
 }
 
-
-@keyframes rotate{
-    100% {
-        transform: rotate(360deg);
-        transition: 1s;
+@keyframes bounce2{
+    from {
+        transform: scale(1);
+        transition: .1s;
+    }
+    to {
+        transform: scale(0.5);
+        transition: .1s;
     }
 }
 
-img.light{
-    animation: rotate 10s infinite, bounce 0.3s infinite;
+@keyframes rotate{
+    from {
+        transform: rotate(10deg);
+        transition: 1s;
+    }
+
+    to {
+        transform: rotate(-10deg);
+        transition: 1s;
+    }
     
 }
 
-div.first>div, div.second>div, div.third>div{
-    display: inline-block;
+div.second{
+    position: relative;
 }
 
-div.img{
-    display: inline-block;
+div.second>p{
+    font-size: 50px;
+    font-family: 'Black Han Sans', sans-serif;
+    color: rgb(255, 0, 0);
 }
 
-div.second>div>img{
+div.professor{
+    position: absolute;
+    top: 10%;
+    z-index: 1000;
+    display: inline-block;
+    opacity: 0;
+    animation: flip 3s infinite forwards, fadein 3s 15s 1 forwards;
+}
+
+div.professor>img{
     height: 200px;
 }
 
-div.text{
-    margin-top: 20px;
-    font-size: 30px;
-    font-family: 'Black Han Sans', sans-serif;
+img.img{
+    position: absolute;
+    left: 50%;
 }
 
+img.hand{
+    position: absolute;
+    animation: rotate 0.1s infinite;
+    right: 25%;
+}
 
+div.container{
+    position: relative;
+}
+
+div.confetti{
+    position: absolute;
+    left: 0;
+
+}
+
+div.confetti>img, div.confetti1>img{
+    height: 800px;
+}
+
+div.confetti1{
+    position: absolute;
+    right: 0;
+}
+
+div.first>div:first-child, div.first>div:nth-child(3),
+div.first>div:nth-child(5){
+    animation: bounce 0.3s infinite;
+}
+
+div.first>div:nth-child(2),
+div.first>div:nth-child(4){
+    animation: bounce2 0.3s infinite;
+}
+
+div.third>div:first-child, div.third>div:nth-child(3),
+div.third>div:nth-child(5){
+    animation: bounce 0.3s infinite;
+}
+
+div.third>div:nth-child(2),
+div.third>div:nth-child(4){
+    animation: bounce2 0.3s infinite;
+}

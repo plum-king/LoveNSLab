@@ -20,27 +20,49 @@ div.container>div{
     display: inline-block;
 }
 
-div#first, #second, #third{
+div#first, #second, #third, #fourth{
     position: relative;
 }
 
 div#first>p{
+    text-align: justify;
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 15%;
     font-weight: bold;
-    font-size: 15px;
-
+    font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 
 div#second>p{
+    text-align: justify;
     position: absolute;
     top: 10%;
     left: 15%;
     font-weight: bold;
     font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
 
+div#fourth>p{
+    text-align: justify;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+#second>img.postit{
+    width: 480px;
+    height: 590px;
+}
+
+#fourth>img.postit{
+    width: 480px;
+    height: 590px;
 }
 
 img.postit{
@@ -59,6 +81,7 @@ img.sketchbook{
 
 div.footer{
     margin-top: 40px;
+    display: block;
 }
 
 
